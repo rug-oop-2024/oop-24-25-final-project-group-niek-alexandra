@@ -3,9 +3,11 @@ import os
 from typing import List
 from glob import glob
 
+
 class NotFoundError(Exception):
     def __init__(self, path):
         super().__init__(f"Path not found: {path}")
+
 
 class Storage(ABC):
 
@@ -50,6 +52,7 @@ class Storage(ABC):
         """
         pass
 
+
 class LocalStorage(Storage):
 
     def __init__(self, base_path: str = "./assets"):
@@ -61,13 +64,13 @@ class LocalStorage(Storage):
         path = self._join_path(key)
         # Ensure parent directories are created
         os.makedirs(os.path.dirname(path), exist_ok=True)
-        with open(path, 'wb') as f:
+        with open(path, "wb") as f:
             f.write(data)
 
     def load(self, key: str) -> bytes:
         path = self._join_path(key)
         self._assert_path_exists(path)
-        with open(path, 'rb') as f:
+        with open(path, "rb") as f:
             return f.read()
 
     def delete(self, key: str = "/"):
