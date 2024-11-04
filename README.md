@@ -156,7 +156,7 @@ If you did not implement the feature
 | Up-to-date requirements.txt           | NF           |                |                                          |        |
 | `ML/detect-features`                  | FN           |                |                                          |        |
 | `ML/artifact`                         | NF           | Niek           | X                                        |        |
-| `ML/feature`                          | NF           |                |                                          |        |
+| `ML/feature`                          | NF           | Niek           | X                                        |        |
 | `ML/metric`                           | NF           |                |                                          |        |
 | `ML/metric/extensions`                | FN           |                |                                          |        |
 | `ML/model`                            | NF           |                |                                          |        |

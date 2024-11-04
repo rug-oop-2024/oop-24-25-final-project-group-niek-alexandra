@@ -1,6 +1,8 @@
-import pytest
-from autoop.core.ml.artifact import Artifact
 import base64
+
+import pytest
+
+from autoop.core.ml.artifact import Artifact
 
 
 @pytest.fixture
